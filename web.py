@@ -11,6 +11,21 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/Home.html', methods=['GET'])
+def home():
+    return render_template('Home.html')
+
+
+@app.route('/About.html', methods=['GET'])
+def about():
+    return render_template('About.html')
+
+
+@app.route('/Contact.html', methods=['GET'])
+def contact():
+    return render_template('Contact.html')
+
+
 @app.route('/visit', methods=['GET'])
 def visit():
     url = 'https://fanyi.baidu.com/v2transapi' #need api link
