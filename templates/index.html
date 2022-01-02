@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;"><head>
+<html style="font-size: 16px;">
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="keywords" content="BTS AI, 1, Demo Day Batch#708, DATA SCIENCE TEAM BTS">
@@ -8,111 +9,61 @@
     <title>Home</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/nicepage.css')}}" media="screen">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css')}}" media="screen">
-    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js')}}" defer=""></script>
-    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/nicepage.js')}}" defer=""></script>
     <meta name="generator" content="Nicepage 4.2.6, nicepage.com">
     <meta property="og:title" content="BTS Co pilot">
     <meta property="og:description" content="Best place to generate Bed Tiem Stories">
     <meta property="og:image" content="images/c267f3ce97e6dd79975da8d5128630d3fe89635fafdcb1d683e63faf6b4c71ee632313c7288461520d2559f298e089f5e0d25aa91c8704506e1bbd_1280.png">
     <meta property="og:url" content="bts-ai.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    
-    
-    
-    
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js')}}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/nicepage.js')}}" defer=""></script>
     <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"logo": "{{ url_for('static', filename='images/images/c267f3ce97e6dd79975da8d5128630d3fe89635fafdcb1d683e63faf6b4c71ee632313c7288461520d2559f298e089f5e0d25aa91c8704506e1bbd_1280.png')}}"
-}</script>
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "",
+      "logo": "{{ url_for('static', filename='images/images/c267f3ce97e6dd79975da8d5128630d3fe89635fafdcb1d683e63faf6b4c71ee632313c7288461520d2559f298e089f5e0d25aa91c8704506e1bbd_1280.png')}}"
+      }
+    </script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:type" content="website">
   </head>
-  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body"><header class="u-clearfix u-header u-header" id="sec-412a"><div class="u-clearfix u-sheet u-sheet-1">
-   <script>
-function download(filename, text) {
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    element.setAttribute('download', filename);
-
-    element.style.display = 'none';
-    document.body.appendChild(element);
-
-    element.click();
-
-    document.body.removeChild(element);
-}
-
-// Start file download.
-document.getElementById("dwn-btn").addEventListener("click", function(){
-    // Generate download of hello.txt file with some content
-    var text = document.getElementById("text-val").value;
-    var filename = "hello.txt";
-    
-    download(filename, text);
-}, false);
-
-   </script>
-   <script>
-
-
-var doc = new jsPDF();
-
-function saveDiv(divId) {
- doc.fromHTML(`<html><body>` + document.getElementById(divId).innerHTML + `</body></html>`);
- doc.save('div.pdf');
-}
-
-function printDiv(divId) {
-
- let mywindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
-
- mywindow.document.write('</head><body >');
- mywindow.document.write(document.querySelector("#text-val > textarea").innerHTML);
- mywindow.document.write('</body></html>');
-
- mywindow.document.close(); // necessary for IE >= 10
- mywindow.focus(); // necessary for IE >= 10*/
-
- mywindow.print();
- mywindow.close();
-
- return true;
-}
-   </script>
-    <a href="" class="u-image u-logo u-image-1" data-image-width="1280" data-image-height="1280">
-          <img src="{{ url_for('static', filename='images/c267f3ce97e6dd79975da8d5128630d3fe89635fafdcb1d683e63faf6b4c71ee632313c7288461520d2559f298e089f5e0d25aa91c8704506e1bbd_1280.png')}}" class="u-logo-image u-logo-image-1">
+  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body">
+    <header class="u-clearfix u-header u-header" id="sec-412a">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <a href="" class="u-image u-logo u-image-1" data-image-width="1280" data-image-height="1280">
+            <img src="{{ url_for('static', filename='images/c267f3ce97e6dd79975da8d5128630d3fe89635fafdcb1d683e63faf6b4c71ee632313c7288461520d2559f298e089f5e0d25aa91c8704506e1bbd_1280.png')}}" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
-              <svg viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</symbol>
-</defs></svg>
-            </a>
-          </div>
-          <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About.html" style="padding: 10px 20px;">About</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact.html" style="padding: 10px 20px;">Contact</a>
-</li></ul>
-          </div>
-          <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html" style="padding: 10px 20px;">About</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html" style="padding: 10px 20px;">Contact</a>
-</li></ul>
-              </div>
+            <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+              <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+                <svg viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+  </symbol>
+  </defs></svg>
+              </a>
             </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-          </div>
+            <div class="u-custom-menu u-nav-container">
+              <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a>
+  </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About.html" style="padding: 10px 20px;">About</a>
+  </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact.html" style="padding: 10px 20px;">Contact</a>
+  </li></ul>
+            </div>
+            <div class="u-custom-menu u-nav-container-collapse">
+              <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+                <div class="u-inner-container-layout u-sidenav-overflow">
+                  <div class="u-menu-close"></div>
+                  <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html" style="padding: 10px 20px;">Home</a>
+  </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html" style="padding: 10px 20px;">About</a>
+  </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html" style="padding: 10px 20px;">Contact</a>
+  </li></ul>
+                </div>
+              </div>
+              <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+            </div>
         </nav>
-      </div></header>
+      </div>
+    </header>
+
     <section class="u-align-center u-clearfix u-section-1" id="carousel_3a27">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-1">📖&nbsp; &nbsp;BTS starts here :</h2>
@@ -120,18 +71,19 @@ function printDiv(divId) {
           <div class="u-repeater u-repeater-1">
             <div id="pdf" class="u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle">
               <div id="text-val" rows=4 class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-container-layout-1">
-                <textarea id="text-val" class="u-text u-text-grey-40 u-text-2" rows="5">Hey... I'am so excited to start with you to write a new story !!!
+                <textarea id="text-val" class="u-text u-text-grey-40 u-text-2" rows="5" style="min-width: 100% !important;">Hey... I'am so excited to start with you to write a new story !!!
                 </textarea>
               </div>
             </div>
           </div>
         </div>
-        <a onclick="saveDiv('pdf')" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-1">Inspire Me!</a>
+        <a class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-1">Inspire Me!</a>
         <a onclick="printDiv('pdf')" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-btn-2">PRINT MY STORY</a>
-        <a id="dwn-btn" class="u-btn u-button-style u-custom-color-1 u-hover-palette-1-base u-radius-1 u-btn-3">DOWNLOAD BTS</a>
+        <a onclick="saveDiv('pdf', 'Title')"  class="u-btn u-button-style u-custom-color-1 u-hover-palette-1-base u-radius-1 u-btn-3">DOWNLOAD BTS</a>
         <!-- <input type="button" id="dwn-btn" value="Download dinamically generated text file"/> -->
       </div>
     </section>
+
     <section class="u-clearfix u-section-2" id="sec-e56b">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
@@ -152,6 +104,7 @@ function printDiv(divId) {
         </div>
       </div>
     </section>
+
     <section class="u-align-center u-clearfix u-image u-shading u-section-3" src="" data-image-width="1346" data-image-height="896" id="sec-3146">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-title u-text-1">DATA SCIENCE TEAM BTS</h1>
@@ -176,5 +129,34 @@ function printDiv(divId) {
         <span>Website Builder Software</span>
       </a>. 
     </section>
-  
-</body></html>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <script>
+        var doc = new jsPDF();
+
+        function saveDiv(divId, title) {
+        doc.fromHTML(`<html><head><title>${title}</title></head><body>` + document.getElementById(divId).innerHTML + `</body></html>`);
+        doc.save('BTS.pdf');
+        }
+
+
+
+        function printDiv(divId) {
+
+        let mywindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
+
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(document.querySelector("#text-val > textarea").innerHTML);
+        mywindow.document.write('</body></html>');
+
+        mywindow.document.close(); // necessary for IE >= 10
+        mywindow.focus(); // necessary for IE >= 10*/
+
+        mywindow.print();
+        mywindow.close();
+
+        return true;
+        }
+    </script>
+  </body>
+</html>
