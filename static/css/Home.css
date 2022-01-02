@@ -1,3 +1,14 @@
+.btn-list {
+  width: 100%; 
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+}
+
+.btn-list a {
+  margin: 0 !important;
+}
+
 .u-section-1 .u-sheet-1 {
   min-height: 1148px;
 }
@@ -184,6 +195,15 @@
 }
 
 @media (max-width: 575px) {
+  .btn-list {
+    display: block;
+  }
+
+  .btn-list a{ 
+    margin: 10px 0 !important;
+    width: 100%;
+  }
+
   .u-section-1 .u-sheet-1 {
     min-height: 1018px;
   }

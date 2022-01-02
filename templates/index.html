@@ -63,23 +63,26 @@
         </nav>
       </div>
     </header>
-
+    <!-- class="u-text u-text-1" -->
+    <!-- class="u-list u-list-1" -->
     <section class="u-align-center u-clearfix u-section-1" id="carousel_3a27">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-1">📖&nbsp; &nbsp;BTS starts here :</h2>
-        <div class="u-list u-list-1">
+        <h2>📖&nbsp; &nbsp;BTS starts here :</h2>
+        <div class="btn-list">
+          <a class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-1">Inspire Me!</a>
+          <a onclick="printDiv('pdf')" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-2">PRINT MY STORY</a>
+          <a onclick="saveDiv('pdf', 'Title')"  class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-3">DOWNLOAD BTS</a>
+        </div>
+        <div>
           <div class="u-repeater u-repeater-1">
             <a onclick="Add Prediction to Textarea" class="u-btn u-btn-round" style="min-width: 100% !important;">Placeholder for Pred</a>
             <div id="pdf" class="u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle">
-              <div id="text-val" rows=4 class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-container-layout-1">
+              <div rows=4 class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-container-layout-1">
                 <textarea id="text-val" class="u-text u-text-grey-40 u-text-2" rows="5" style="min-width: 100% !important;">Hey... I'm so excited to start with you to write a new story !!!</textarea>
               </div>
             </div>
           </div>
         </div>
-        <a class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-1">Inspire Me!</a>
-        <a onclick="printDiv('pdf')" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-2">PRINT MY STORY</a>
-        <a onclick="saveDiv('pdf', 'Title')"  class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-3">DOWNLOAD BTS</a>
       </div>
     </section>
 
@@ -134,27 +137,27 @@
         var doc = new jsPDF();
 
         function saveDiv(divId, title) {
-        doc.fromHTML(`<html><head><title>${title}</title></head><body>` + document.getElementById(divId).innerHTML + `</body></html>`);
-        doc.save('BTS.pdf');
+          let userText = document.getElementById('text-val').value;
+          doc.text(userText, 10, 10, {maxWidth: 150})
+          doc.save('BTS.pdf');
         }
-
 
 
         function printDiv(divId) {
 
-        let mywindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
+          let mywindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
 
-        mywindow.document.write('</head><body >');
-        mywindow.document.write(document.querySelector("#text-val > textarea").innerHTML);
-        mywindow.document.write('</body></html>');
+          mywindow.document.write('</head><body >');
+          mywindow.document.write(document.getElementById('text-val').innerHTML);
+          mywindow.document.write('</body></html>');
 
-        mywindow.document.close(); // necessary for IE >= 10
-        mywindow.focus(); // necessary for IE >= 10*/
+          mywindow.document.close(); // necessary for IE >= 10
+          mywindow.focus(); // necessary for IE >= 10*/
 
-        mywindow.print();
-        mywindow.close();
+          mywindow.print();
+          mywindow.close();
 
-        return true;
+          return true;
         }
     </script>
   </body>
