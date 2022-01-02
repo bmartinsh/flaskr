@@ -148,7 +148,7 @@
           let mywindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
 
           mywindow.document.write('</head><body >');
-          mywindow.document.write(document.getElementById('text-val').innerHTML);
+          mywindow.document.write(document.getElementById('text-val').value);
           mywindow.document.write('</body></html>');
 
           mywindow.document.close(); // necessary for IE >= 10
