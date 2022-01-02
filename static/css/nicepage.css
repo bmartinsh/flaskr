@@ -19303,7 +19303,7 @@ a.pswp__share--download:hover {
   pointer-events: none;
 }
 .u-repeater {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(3, 33.33333333%);
 }
 .u-repeater-item {
