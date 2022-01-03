@@ -82,7 +82,7 @@
         </div>
         <div>
           <div class="u-repeater u-repeater-1">
-            <a id="result_json" class="u-btn u-btn-round" style="min-width: 100% !important;">Placeholder for Pred</a>
+              <a id="result_json" class="u-btn u-btn-round" style="min-width: 100% !important;">Placeholder for Pred</a>
             <div id="pdf" class="u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle">
               <div rows=4 class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-container-layout-1">
                 <textarea id="text-val" class="u-text u-text-grey-40 u-text-2" rows="5" style="min-width: 100% !important;">Hey... I'm so excited to start with you to write a new story !!!</textarea>
@@ -170,19 +170,28 @@
     <script>
       callWs = function(){
 	// The Endpoint URL
-	let url = 'https://taxifare.lewagon.ai/predict_fare/';
+	let url = 'https://bts-gpt2-api-56chpffh5q-uc.a.run.app/';
+
 	fetch(url)
-  .then(function(response) {
-  	// Render the Response Status
-  	document.getElementById('result').innerHTML = response.status;
-    // Parse the body as JSON
-    return response.json();
-  })
-  .then(function(json) {
-  	// Render the parsed body
-  	document.getElementById('result_json').innerHTML = JSON.stringify(json);
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('result_json').innerText = data.ok;
+  // })
+  // .then(function(response) {
+  // 	// Render the Response Status
+  // 	document.getElementById('result').innerHTML = response.status;
+  //   // Parse the body as JSON
+  //   return response.json();
+  // })
+  // .then(function(json) {
+  // 	// Render the parsed body
+  // 	document.getElementById('result_json').innerHTML = JSON.stringify(json);
   })
 }
+    </script>
+    <script>
+    var html = '<button id="result_json">Submit</button>';
+    document.getElementById('text_val').insertAdjacentHTML('afterend', html);
     </script>
   </body>
 </html>
