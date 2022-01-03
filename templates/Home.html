@@ -169,17 +169,22 @@
     <script>
       callWs = function(){
 	// The Endpoint URL
-	let url = 'https://taxifare.lewagon.ai/predict_fare/';
+	let url = 'https://bts-gpt2-api-56chpffh5q-uc.a.run.app/';
+
 	fetch(url)
-  .then(function(response) {
-  	// Render the Response Status
-  	document.getElementById('result').innerHTML = response.status;
-    // Parse the body as JSON
-    return response.json();
-  })
-  .then(function(json) {
-  	// Render the parsed body
-  	document.getElementById('result_json').innerHTML = JSON.stringify(json);
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('result_json').innerText = data.ok;
+  // })
+  // .then(function(response) {
+  // 	// Render the Response Status
+  // 	document.getElementById('result').innerHTML = response.status;
+  //   // Parse the body as JSON
+  //   return response.json();
+  // })
+  // .then(function(json) {
+  // 	// Render the parsed body
+  // 	document.getElementById('result_json').innerHTML = JSON.stringify(json);
   })
 }
     </script>
