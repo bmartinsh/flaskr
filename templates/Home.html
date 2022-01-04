@@ -81,10 +81,10 @@
         </div>
         <div>
           <div class="u-repeater u-repeater-1">
-            <a id="result_json" class="u-btn u-btn-round" style="min-width: 100% !important;">Placeholder for Pred</a>
+            <a id="result_json" class="u-btn u-btn-round" style="min-width: 100% !important;">Need inspiration 🤔 click on Inspire Me 🔘!</a>
             <div id="pdf" class="u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle">
               <div rows=4 class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-container-layout-1">
-                <textarea id="text-val" class="u-text u-text-grey-40 u-text-2" rows="5" style="min-width: 100% !important;">Hey... I'm so excited to start with you to write a new story !!!</textarea>
+                <textarea id="text-val" class="u-text u-text-grey-40 u-text-2" rows="5" style="min-width: 100% !important;">Once upon a time, </textarea>
               </div>
             </div>
           </div>
@@ -169,12 +169,15 @@
     <script>
       callWs = function(){
 	// The Endpoint URL
-	let url = 'https://bts-gpt2-api-56chpffh5q-uc.a.run.app/';
+	// let ur = 'https://bts-gpt2-api-56chpffh5q-uc.a.run.app/';
+  var prompt = document.getElementById('text-val').value;
+  let url = `https://bts-gpt2-api-56chpffh5q-uc.a.run.app/prompt=${prompt}`;
 
 	fetch(url)
   .then(response => response.json())
   .then(data => {
-    document.getElementById('result_json').innerText = data.ok;
+    // Need to update the key from the JSON file once the API will be working (data.ok must be different)
+    document.getElementById('result_json').innerText = data.prompt;
   // })
   // .then(function(response) {
   // 	// Render the Response Status
