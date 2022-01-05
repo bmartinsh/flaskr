@@ -86,11 +86,11 @@
         <br>
           <div class="slidecontainer">
             <p>Temperature: <span id="temp"></span></p> 
-            <input type="range" min="0" max="1" value="0.7" step="0.1" class="sliderT" id="myRange">
+            <input type="range" min="0" max="1" value="0.7" step="0.1" class="slidert" id="myRange">
           </div>
           <div>
             <p>Length: <span id="length"></span></p> 
-            <input type="range" min="10" max="50" value="20" step="10" class="slider" id="myRangeL">
+            <input type="range" min="10" max="50" value="20" step="10" class="sliderl" id="myRangeL">
           </div>
         <br/>
 
@@ -100,7 +100,7 @@
         </div>
         <div>
           <div class="u-repeater u-repeater-1">
-            <a id="result_json" class="u-btn u-btn-round" style="min-width: 100% !important;">Need inspiration 🤔 click on Inspire Me!</a>
+            <a onclick="appPredict()" id="result_json" class="u-btn u-btn-round" style="min-width: 100% !important;">Need inspiration 🤔 click on Inspire Me!</a>
             <div id="pdf" class="u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle">
               <div rows=4 class="u-container-layout u-similar-container u-valign-top-lg u-valign-top-md u-valign-top-sm u-container-layout-1">
                 <textarea id="text-val" class="u-text u-text-grey-40 u-text-2" rows="5" style="min-width: 100% !important;">Once upon a time, </textarea>
@@ -236,6 +236,15 @@ output.innerHTML = sliderl.value;
 sliderl.oninput = function() {
   output.innerHTML = this.value;
 }
+    </script>
+    <script>
+
+function appPredict() {
+  var h = document.getElementById("text-val");
+  var s = document.getElementById("result_json").innerText;
+  h.insertAdjacentText("beforeend", s);
+}
+
     </script>
   </body>
 </html>
