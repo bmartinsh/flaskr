@@ -170,12 +170,15 @@
     <script>
       callWs = function(){
 	// The Endpoint URL
-	let url = 'https://bts-gpt2-api-56chpffh5q-uc.a.run.app/';
+	// let ur = 'https://bts-gpt2-api-56chpffh5q-uc.a.run.app/';
+  var prompt = document.getElementById('text-val').value;
+  let url = `https://bts-api-56chpffh5q-uc.a.run.app/generate?prompt=${prompt}&length=10&nsamples=1&temperature=0.7`;
 
 	fetch(url)
   .then(response => response.json())
   .then(data => {
-    document.getElementById('result_json').innerText = data.ok;
+    // Need to update the key from the JSON file once the API will be working (data.ok must be different)
+    document.getElementById('result_json').innerText = data.text;
   // })
   // .then(function(response) {
   // 	// Render the Response Status
