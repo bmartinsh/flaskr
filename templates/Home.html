@@ -80,9 +80,22 @@
           </div> -->
         <div class="btn-list">
           <a onclick="callWs()" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-1">Inspire Me!</a>
-          <p>Length: <span name="length" id="length"></span></p><input type="range" min="10" max="50" value="20" step="10" class="sliderl" id="RangeLength">
+          <div>
+            <p>Length: 
+              <span name="length" id="length">
+              </span>
+            </p>
+            <input type="range" min="10" max="50" value="20" step="10" class="sliderl" id="RangeLength">  
+          </div>
           <br>
-          <p>Temperature: <span name="temp" id="temp"></span></p><input type="range" min="0" max="1" value="0.7" step="0.1" class="slidert" id="RangeTemp">
+          <div>
+            <p>Temperature: 
+              <span name="temp" id="temp">
+              </span>
+            </p>
+            <input type="range" min="0.0" max="1.0" value="0.7" step="0.1" class="slidert" id="RangeTemp">
+            
+          </div>
           <a onclick="">🗣</a>
           <!-- <a onclick="printDiv('pdf')" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-2">PRINT MY STORY</a>
           <a onclick="saveDiv('pdf', 'Title')"  class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-3">DOWNLOAD BTS</a> -->
@@ -195,11 +208,12 @@
     <script>
       callWs = function(){
 	// The Endpoint URL
-	// Google API
+	// Google API Created on Jan 6 : https://gpt2c-56chpffh5q-uc.a.run.app/
+  // Previous API : https://bts-api-56chpffh5q-uc.a.run.app
   var prompt = document.getElementById('text-val').value;
   var length = document.getElementById('RangeLength').value;
   var temp = document.getElementById('RangeTemp').value;
-  let url = `https://bts-api-56chpffh5q-uc.a.run.app/generate?prompt=${prompt}&length=${length}&nsamples=1&temperature=${temp}`;
+  let url = `https://gpt2c-56chpffh5q-uc.a.run.app/generate?prompt=${prompt}&length=${length}&nsamples=1&temperature=${temp}`;
 
 	fetch(url)
   .then(response => response.json())
@@ -214,7 +228,7 @@
 	// Google API
   var prompt = document.getElementById('text-val').value;
   // var length = document.getElementById('RangeLength').value;
-  let url = `https://bts-api-56chpffh5q-uc.a.run.app/generate?prompt=${prompt}&length=200&nsamples=1&temperature=0.7`;
+  let url = `https://gpt2c-56chpffh5q-uc.a.run.app/generate?prompt=${prompt}&length=200&nsamples=1&temperature=0.7`;
 
 	fetch(url)
   .then(response => response.json())
