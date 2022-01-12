@@ -58,7 +58,45 @@
         </nav>
       </div></header> 
     
-    
+
+      <p>Enter some text to add, then use the first two buttons below to insert your text after the existing text.</p>
+
+      <section>
+        <textarea>This is my text</textarea>
+      </section>
+      
+      <input type="text"><br>
+      <button class="before">Insert before</button>
+      <button class="after">Insert after</button>
+      <button class="reset">Reset demo</button>
+
+      <script>
+
+        var beforeBtn = document.querySelector('.before');
+        var afterBtn = document.querySelector('.after');
+        var resetBtn = document.querySelector('.reset');
+      
+        var para = document.querySelector('section p');
+        var initContent = para.textContent;
+      
+        var textInput = document.querySelector('input');
+      
+        resetBtn.addEventListener('click', function() {
+          para.textContent = initContent;
+          textInput.value = '';
+        });
+      
+        beforeBtn.addEventListener('click', function() {
+          para.insertAdjacentText('afterbegin',textInput.value);
+        });
+      
+        afterBtn.addEventListener('click', function() {
+          para.insertAdjacentText('beforeend',textInput.value);
+        });
+      
+      </script>
+      
+
     <footer class="u-clearfix u-footer u-grey-80 u-footer" style="text-align: justify;"><div class="u-clearfix u-sheet u-sheet-1">
       <br>
       <br>
